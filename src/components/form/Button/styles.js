@@ -1,16 +1,31 @@
 import styled from 'styled-components';
 
+import { primaryDark } from '../../../styles/colors';
+
 export const ButtonInput = styled.button`
-  padding: 10px;
+  padding: ${props => props.loading ? "3px" : "10px"};
   margin: 8px 0 0;
-  background-color: #000;
-  border: none;
+  background-color: ${primaryDark};
   color: #fff;
+  font-size: 16px;
+  border: none;
 
   &:hover {
     cursor: pointer;
-    background-color: #303030;
+    background-color: ${props => props.loading ? primaryDark : "#303030"};
   }
+
+  &:active {
+    cursor: pointer;
+    background-color: ${primaryDark};
+  }
+
+  &:focus {
+    outline: none;
+  }
+
 `;
 
 export const Label = styled.div``;
+
+export const LoadingSection = styled.section``;

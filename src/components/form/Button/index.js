@@ -1,11 +1,26 @@
 import React from "react";
 
-import { ButtonInput, Label } from "./styles";
+import { useLoading, Puff } from '@agney/react-loading';
 
-function Button({ label }) {
+import { ButtonInput, Label, LoadingSection } from "./styles";
+
+function Button({ label, loading }) {
+  const { containerProps, indicatorEl } = useLoading({
+    loading: loading,
+    loaderProps: {
+      valueText: 'Carregando',
+    },
+    indicator: <Puff width="30" />,
+  });
+
   return (
-    <ButtonInput>
-      <Label>{label}</Label>
+    <ButtonInput loading={loading} disabled={loading}>
+      {loading ? (
+        <LoadingSection {...containerProps}>
+          {indicatorEl}
+        </LoadingSection> ) : (
+          <Label>{label}</Label>
+        )}      
     </ButtonInput>
   );
 }

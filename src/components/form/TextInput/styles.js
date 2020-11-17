@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 
+import { primaryGrey } from '../../../styles/colors';
+
 export const Container = styled.div`
-  border-radius: 5px;
   border: none;
-  width: 225px;
-  padding-left: 10px;
+  padding-left: 15px;
   margin: 8px 0;
   background-color: #fff;
   display: flex;
-  height: 35px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid ${primaryGrey};
 `;
 
 export const Input = styled.input`
   border: none;
   flex: 1;
-  border-left: 1px solid black;
+  border-left: 1px solid ${primaryGrey};
   border-radius: 0;
-  padding: 10px;
-  margin-left: 10px;
+  font-size: 14px;
+  padding: 13px;
+  margin-left: 15px;
   &:focus {
     outline: none;
   }
