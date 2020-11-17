@@ -16,18 +16,13 @@ export const Container = styled.div`
   border: 1px solid black;
 `;
 
-export const Divisor = styled.div`
-  margin-left: 10px;
-  width: .08px;
-  background-color: #000;
-  height: 100%;
-`;
-
 export const Input = styled.input`
   border: none;
   flex: 1;
+  border-left: 1px solid black;
+  border-radius: 0;
   padding: 10px;
-  margin-left: 5px;
+  margin-left: 10px;
   &:focus {
     outline: none;
   }

@@ -19,7 +19,7 @@ function Login() {
         </IconContainer>
         <Form onSubmit={submitForm}>
           <TextInput name="username" type="text" placeholder="Usuário" icon={<FaUser size={16} />} />
-          <TextInput name="password" type="password" placeholder="Senha" icon={<FaKey size={14} />} />
+          <TextInput name="password" type="password" placeholder="Senha" icon={<FaKey size={16} />} />
           <Button label="Entrar" />
         </Form>
       </LoginFormContainer>
